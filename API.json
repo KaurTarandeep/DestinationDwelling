@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Superior Room",
+        "size": "280 sq. ft.",
+        "description" :"Experience comfort and style in our Superior Room, equipped with AC, a refreshing shower, spacious double bed, TV entertainment, room service, and WiFi, all complemented by an attached bathroom for your convenience.",
+        "extra": "Includes Buffet Breakfast and Wi-Fi.",
+        "price": "2600",
+        "image": "./assets/room-1.jpg"
+
+    },
+    {
+        "id": 2,
+        "name": "Imperial Suite",
+        "size": "310 sq. ft.",
+        "description" :"Indulge in luxury and comfort with our Deluxe Rooms, designed to elevate your stay to new heights. Featuring modern amenities and stylish furnishings, our Deluxe Rooms offer the perfect retreat for discerning travelers.",
+        "extra": "Room With Free Cancellation | Breakfast only",
+        "price": "3200",
+        "image": "./assets/room-7.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Two-Bedroom Suite",
+        "size": "450 sq. ft.",
+        "description" :"A two-bedroom suite consists of two separate bedrooms, with private bathroom, with shared living room. This configuration is perfect for families or groups traveling together who want the privacy of individual bedrooms.",
+        "extra": "Room With Free Cancellation | Breakfast only ",
+        "price": "7300",
+        "image": "./assets/room-8.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Studio Room",
+        "size": "310 sq. ft.",
+        "description" :"Studio rooms are typically open-plan accommodations that combine living and sleeping areas into a single space. They are for individuals or couples looking for a compact yet comfortable living space.",
+        "extra": "Room With Free Cancellation | Breakfast | Lunch | Dinner",
+        "price": "5300",
+        "image": "./assets/room-4.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Executive Room",
+        "size": "240 sq. ft.",
+        "description" :"Executive rooms are designed for business travelers and often include extra amenities such as a work desk, ergonomic chair, and access to business facilities like a meeting room or a business center.",
+        "extra": "Room With Free Wifi | only Lunch ",
+        "price": "3550",
+        "image": "./assets/room-5.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Family Room",
+        "size": "290 sq. ft.",
+        "description" :"Family rooms are spacious accommodations designed to accommodate families or groups traveling together. They may feature multiple beds or separate sleeping areas to provide privacy and comfort for each guest.",
+        "extra": "Room With Free Wifi | Free Cancellation | Breakfast only ",
+        "price": "4850",
+        "image": "./assets/room-6.jpg"   
+    }
+    
+]

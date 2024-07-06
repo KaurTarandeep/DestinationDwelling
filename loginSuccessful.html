@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <link rel="stylesheet" href="CSS Files/LoginPage.css">
+    <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #cedaf3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .intro, .success {
+                background: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .section__container {
+                text-align: center;
+            }
+
+            .section__subheader {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .section__header {
+                color: black;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            .input__group {
+                margin-bottom: 15px;
+                text-align: left;
+            }
+
+            .input__group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .input__group input {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            .btn:hover {
+                background-color: #218838;
+            }
+
+            .success__message {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="success">
+        <div class="section__container success__container">
+            <h1 class="section__header">Login Successful!</h1>
+            <p class="success__message">Welcome to your account.</p>
+            <a href="index.html" class="btn">Go to Homepage</a>
+        </div>
+    </div>
+</body>
+</html>

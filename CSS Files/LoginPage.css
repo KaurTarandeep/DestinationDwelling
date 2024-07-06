@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #0f1a2c;
+  --secondary-color: #f6ac0f;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+  background-color: var(--primary-color);
+  padding: 100px 0;
+}
+
+.intro__container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.section__subheader {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.section__header {
+  color: var(--white);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.input__group {
+  margin-bottom: 20px;
+}
+
+.input__group label {
+  display: block;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.input__group input {
+  width: 80%; /* Reduced width */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--extra-light);
+  color: var(--text-dark);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+/* 
+.btn:hover {
+  background-color: #d6901d;
+} */
+.extra__links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.extra__links p {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.extra__links a {
+  color: var(--secondary-color); /* Changed to secondary color */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.extra__links a:hover {
+  color: white; /* Changed to primary color */
+}
+
+.input__group #invalidPassword{
+  margin-top: 10px;
+  color: rgb(187, 5, 5);
+  font-size: medium;
+  
+}

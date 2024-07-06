@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get Quote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS Files/Checkout.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- <img src="kasperlogo.png" height=60 width=140 class="companylogo"></div> -->
+        <div class="logo nav__logo">
+            <div>H</div>
+            <span>HOTEL<br />DestinationDwellings</span>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="getquotetext">Your Details</h3>
+
+        <div class="blocks">
+            <div class="left">
+                <p>First Name</p>
+                <input class="input-field" id="fname" type="text" placeholder="Enter your first name">
+                <p>Last Name</p>
+                <input class="input-field" id="lname" type="text" placeholder="Enter your last name">
+                <p>Email</p>
+                <input class="input-field" id="email" type="email" placeholder="Enter your email">
+                <p>Contact Number</p>
+                <input class="input-field" id="contact" type="tel" placeholder="Enter your contact number">
+            </div>
+            <div class="right">
+                <div class="trip-detail-container">
+                    <div class="one-way-container">
+                        <h3 class="trip-detail-title">BOOKING-DETAILS</h3>
+
+                        <table>
+                            <table>
+                                <thead>
+                                    <th>
+                                        <img id="img" height="150px" width="250px" />
+                                    </th>
+                                    <th id="roomHeading"></th>
+                                </thead>
+                                <tr>
+                                    <td>Nights</td>
+                                    <td id="night"></td>
+                                </tr>
+                                <tr>
+                                    <td>Guests</td>
+                                    <td id="guest"></td>
+                                </tr>
+                                <tr>
+                                    <td>Arrival</td>
+                                    <td id="arrival"></td>
+                                </tr>
+                                <tr>
+                                    <td>Departure</td>
+                                    <td id="departure"></td>
+                                </tr>
+                            </table>
+                        </table>
+                    </div>
+                    <hr>
+                    <div class="price-container">
+                        <h3 class="trip-detail-title">Price</h3>
+                        <table>
+                            <tr>
+                                <td>Base Price</td>
+                                <td id="basePrice"></td>
+                            </tr>
+                            <tr>
+                                <td>Tax</td>
+                                <td id="tax"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Price</td>
+                                <td id="total"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="buttons" style="justify-content: center;">
+            <button type="button" onclick="savePersonalDetail()"> Pay Now </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+                            //Here converting string into date 
+            const checkin= new Date(localStorage.getItem("checkinDate"))
+            const checkout= new Date(localStorage.getItem("checkoutDate"))
+            // calculate the absolute difference in time between two Date objects which return in milliseconds 
+            const diffTime= Math.abs(checkout-checkin) 
+            // Convert milliseconds to days
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+            console.log(diffDays)
+            
+            const detail = JSON.parse(localStorage.getItem('roomDetail'))
+            if (detail) {
+                document.getElementById("night").innerText= diffDays+ " Nights" 
+                document.getElementById("img").src= detail.image
+                document.getElementById("guest").innerText= "Adult: "+localStorage.getItem('Adult')+"  Child: "+localStorage.getItem('Child')
+                document.getElementById("arrival").innerText= localStorage.getItem('checkinDate')
+                document.getElementById("departure").innerText= localStorage.getItem('checkoutDate')
+                document.getElementById("roomHeading").innerText = detail.name
+                
+            
+                const basePrice = parseFloat(detail.price.replace('₹', '').replace(',', ''));
+                const tax = basePrice * 0.10; // Assuming tax is 10% of base price
+                const totalPrice = (basePrice*diffDays) + (tax*diffDays);
+            
+
+                document.getElementById('basePrice').innerText = `₹${((basePrice*diffDays).toFixed(2))}`;
+                document.getElementById('tax').innerText = `₹${(tax*diffDays).toFixed(2)}`;
+                document.getElementById('total').innerText = `₹${totalPrice.toFixed(2)}`;
+            }
+        })
+        function savePersonalDetail() {
+            let fname = document.getElementById("fname").value
+            let lname = document.getElementById("lname").value
+            let email = document.getElementById("email").value
+            let contact = document.getElementById("contact").value
+
+            if (fname == "" || lname == "" || email == "" || contact == "") {
+                alert("Please enter your details !")
+            } else {
+                let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailPattern.test(email) || contact.length != 10) {
+                    alert("Please enter valid details")
+                } else {
+                    const personalDetail = {
+                        fname: fname,
+                        lname: lname,
+                        email: email,
+                        contact: contact
+                    }
+
+                    localStorage.setItem('personaldetail', JSON.stringify(personalDetail))
+                    window.location.href = "Payment.html"
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

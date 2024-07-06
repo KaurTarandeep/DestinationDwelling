@@ -1,0 +1,224 @@
+body {
+    /* background: #ebecf9; */
+    background-image: url("../assets/bg-3.jpg");
+  }
+  
+  body .navbar {
+    -webkit-box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+    background-color: #05032783;
+    height: 70px;
+    padding:20px 0px 0px 20px ;
+  }
+  
+
+  .navbar div , .navbar span{
+    color: white;
+  }
+
+  
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: var(--text-light);
+    letter-spacing: 2px;
+  }
+  
+  .logo div {
+    padding-inline: 12px;
+    font-size: 2rem;
+  }
+  
+
+  body .container {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  body .container .getquotetext {
+    color: white;
+    margin-top: 50px;
+    padding: 0px;
+    font-size: xx-large;
+    font-weight: 600;
+    opacity: 0.8;
+    
+  }
+  
+  body .container .blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  body .container .blocks p {
+    opacity: 0.7;
+  }
+  
+  body .container .blocks .left, body .container .blocks .right {
+    background-color: #fff;
+    width: 100%;
+  }
+  
+  body .container .blocks .left {
+    color: black;
+    margin-right: 20px;
+    background-color: transparent;
+    font-weight: 600;
+}
+  
+  body .container .blocks .left .triptype {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  body .container .blocks .left .triptype > * {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  
+  body .container .blocks .left .one-way-button {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #01113e;
+    color: #fff;
+    padding: 15px 15px;
+    cursor: pointer;
+  }
+  
+  body .container .blocks .left .round-trip-button {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 15px;
+    cursor: pointer;
+  }
+  
+ 
+  body .container .blocks .right {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  body .container .blocks .right table {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  body .container .blocks .right table td {
+    color: #716969;
+  }
+  table thead #roomHeading{
+    /* margin-left: 10px ; */
+    text-align: end;
+    letter-spacing: 2px;
+  }
+  body .container .blocks .right table th {
+    color: #716969;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  body .container .blocks .right .trip-detail-container {
+    padding: 30px;
+    padding-top: 0;
+  }
+  
+  body .container .blocks .right .trip-detail-title, body .container .blocks .right .total-price {
+    color: #2348AF;
+    opacity: 0.7;
+  }
+  
+  body .container .blocks .right table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 1.5em;
+  }
+  
+  body .container .blocks .right tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  
+  body .container .blocks .right hr {
+    opacity: 0.3;
+  }
+  
+  body .container .buttons {
+    display: -webkit-box;
+    display:  -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  body .container .buttons button {
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #000d2e;
+    color: #ffffff;
+    padding: 15px 15px;
+    cursor: pointer;
+  }
+  body .container .buttons button a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  @media screen and (max-width: 989px) {
+    .blocks {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+  }
+  .input-field {
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    padding-left: 10px;
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.logo span {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #fff;
+}
+.logo strong {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #7aa2fa;
+}

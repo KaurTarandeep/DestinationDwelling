@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS Files/LoginPage.css">
+</head>
+<body>
+    <div class="intro">
+        <div class="section__container intro__container">
+            <h2 class="section__subheader">Welcome Back!</h2>
+            <h1 class="section__header">Login to Your Account</h1>
+            <form class="login__form" id="loginForm" >
+                <div class="input__group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="Enter your Email" required  >
+                </div>
+                <div class="input__group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter your password"  >
+                    <label id="invalidPassword"> </label>
+                </div>
+                <button class="btn"  onclick="handleLogin(event)">Login</button>
+            </form>
+            <div class="extra__links">
+                <p>Forgot <span><a href="ForgotPassword.html" class="forgot__password__link">Username/Password</a></span>?</p>
+                <p>Don't have an account? <span><a href="SignupPage.html" class="sign__up__link">Sign up</a></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS Files/index.js"></script>
+</body>
+</html>

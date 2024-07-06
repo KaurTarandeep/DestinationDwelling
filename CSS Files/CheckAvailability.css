@@ -1,0 +1,97 @@
+Global Styles
+body {
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #f8fafc; */
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+}
+main {
+    padding-top: 5rem; 
+    background-image: url("../assets/bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 300% 100%; */
+}
+
+/* Booking Section Styles */
+.b{
+    margin: 0px 10px;
+}
+/* Room Section Styles */
+.room__container {
+    padding: 4rem 1rem;
+}
+
+.b .bookdate{
+    padding: 3%; 
+    
+}
+
+.room__grid {
+    margin: 10px ;
+    /* background-color: rgb(245, 245, 249); */
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+    gap: 5rem;
+    height: 400px;
+
+}
+.room__card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    overflow: hidden;
+    column-gap: 3%;
+}
+
+.room__card img {
+    width: 40%;
+    height: auto;
+    border-bottom: 1px solid #ccc; /* Add border below the image */
+    margin: 10px;
+
+}
+
+.room__details {
+    width: 55%;
+    padding: 1rem;
+    text-align: start;
+}
+
+.room__details h3 {
+    font-size: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.room__details p {
+    margin-bottom: 1rem;
+}
+.room__details .end{
+    position: relative;
+    left: 450px;
+    top: -30px;
+    font-size: x-large;   
+}
+
+.room__details button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #f6ac0f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.room__details button:hover {
+    background-color: #e39f0d; 
+    /* Darker shade of the button color */
+}
+
+/* Flex reverse class */
+.flex-reverse {
+    flex-direction: row-reverse;
+}
